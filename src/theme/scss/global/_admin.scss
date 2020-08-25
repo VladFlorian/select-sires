@@ -1,0 +1,44 @@
+.admin-header {
+  h1 {
+    @include font-size(4.2);
+  }
+  margin-bottom: 50px;
+}
+
+.container--settings {
+
+    p.item-count {
+      font-weight: 500;
+      margin-top: 30px;
+      @include font-size(1.2);
+      text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+      letter-spacing: 0.5px;
+    }
+    p {
+      @include font-size(2.2);
+      margin: 0;
+    }
+    .title {
+      margin-bottom: $space-sm;
+    }
+
+
+  vertical-text-container {
+    display: block;
+    margin-bottom: 75px;
+  }
+  admin-data-field {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+.container--administration {
+  h2 {
+    @include font-size(3);
+    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    line-height: 35px;
+    letter-spacing: 0.24px;
+    margin-bottom: 60px;
+
+  }
+}

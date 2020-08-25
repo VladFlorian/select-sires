@@ -1,0 +1,19 @@
+  <ion-card [ngClass]="{'active': active}"
+            style="box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 12px; height: 115px; width: 125px;"
+            class="iconCardButton ion-padding ion-text-center"
+            (click)="buttonClick()"
+            button>
+    <ion-row class="ion-no-padding ion-justify-content-center ion-align-items-center">
+      <img style="height: 59px; width: 59px;"
+           [src]="iconUrl" />
+
+    </ion-row>
+    <ion-row class="ion-no-padding ion-justify-content-center ion-align-items-end">
+      <ion-label class="ion-text-wrap"
+                 [hidden]="label === ''">
+        <h2>{{label}}</h2>
+      </ion-label>
+    </ion-row>
+
+  </ion-card>

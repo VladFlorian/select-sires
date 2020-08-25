@@ -1,0 +1,506 @@
+:root {
+@import '~animate.css/animate.min.css';
+
+
+
+#ionRange {
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+
+.centerIonic {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.vladBtnStyle {
+     --border-radius: 10px 10px 4px 4px;
+     --border-width: 1px;
+    --padding-start: 10px; //Left padding if direction is left-to-right,and right padding if direction is right-to-left of the item 
+
+
+}
+.selectProductModal .modal-wrapper {
+  --width: 70%;
+  --height: 70%;
+  --border-radius: 15px !important;
+  // height: 20%;
+  // top: 80%;
+  // position: absolute;
+  // display: block;
+}
+//    cssClass: 'searchModal'
+.searchModal .modal-wrapper {
+    --width: 30%;
+  --height: 70%;
+  --border-radius: 15px !important;
+  // height: 20%;
+  // top: 80%;
+  // position: absolute;
+  // display: block;
+}
+
+.orderSnopassModal .modal-wrapper {
+    --width: 444px;
+    --height: 323px;
+  --border-radius: 15px !important;
+  // height: 20%;
+  // top: 80%;
+  // position: absolute;
+  // display: block;
+}
+
+
+  //-- Error Item  -items/labels/inputs/icons --
+  .errorItem {
+    label {
+      color: var(--error-color) !important;
+    }
+
+    border-bottom: 0px;
+
+    ion-label {
+      color: var(--error-color);
+
+      ion-icon {
+        --color: var(--error-color);
+      }
+    }
+  }
+
+  .fullViewHeight {
+    height: 90vh;
+  }
+
+  .pageTitle {
+    font-size: 42px;
+    font-weight: 600;
+
+  }
+
+  .pageHeader {
+    margin-top: 70px;
+    // margin-bottom: 30px;
+  }
+
+  .layout-container {
+    width: 95%;
+    max-width: 1240px;
+    margin: auto;
+     padding-top: 40px;
+  }
+
+    .layout-container-no-padding {
+      width: 95%;
+      max-width: 1240px;
+      margin: auto;
+    }
+
+
+
+  a[href],
+  input[type='submit'],
+  input[type='image'],
+  label[for],
+  select,
+  button,
+  .pointer {
+    cursor: pointer !important;
+  }
+
+  .iconBtnCard {
+    --box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+        --border-radius: 12px;
+        --width: 195px;
+        --height: 180px;
+        --padding: 0;
+        --padding-top: 35px;
+  }
+
+  .centerPerfect {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+  }
+  //-- User Profile  Menu Component Styling for Desktop --
+  .userProfileMenuStyle {
+    .popover-content.sc-ion-popover-md {
+      position: fixed;
+      top: 59px !important;
+      bottom: auto !important;
+      padding-top: 0px !important;
+      right: 0 !important;
+      left: auto !important;
+      transform-origin: right bottom;
+    }
+  }
+
+  //-- User Profile  Menu Component Styling for Mobile --
+  .userProfileMenuStyleMobile {
+    .popover-content.sc-ion-popover-md {
+      position: fixed;
+      right: 0 !important;
+      top: 59px !important;
+      bottom: auto !important;
+      left: auto !important;
+      transform-origin: right bottom;
+    }
+
+    .popover-content.sc-ion-popover-ios {
+      position: fixed;
+      right: 0 !important;
+      top: 59px !important;
+      bottom: auto !important;
+      left: auto !important;
+      transform-origin: right bottom;
+    }
+  }
+
+  //-- Select Access Menu Component Styling for Desktop --
+  .selectAccessMenuStyle {
+    .popover-content.sc-ion-popover-md {
+      position: fixed;
+      top: auto !important;
+      left: 269px !important;
+      bottom: 0 !important;
+      width: var(--sideMenuWidth);
+      transform-origin: left top;
+    }
+  }
+
+  //-- Select Access Menu Component Styling for Mobile --
+  .selectAccessMenuStyleMobile {
+    .popover-content.sc-ion-popover-md {
+      position: fixed;
+      top: auto !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      width: var(--sideMenuWidth);
+      transform-origin: left top;
+    }
+
+    .popover-content.sc-ion-popover-ios {
+      position: fixed;
+      top: auto !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      width: var(--sideMenuWidth);
+      transform-origin: left top;
+    }
+  }
+
+
+
+
+  //-- Round Image - Transforms images intoa  circle and border --
+  .roundedImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #69ADD3 !important;
+
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+  }
+
+.addLessonFilters .popover-wrapper {
+  --width: 30%;
+  --border-radius: 2px !important;
+ --background: transarent;
+  // --border-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.12);
+  // --box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  .popover-arrow.sc-ion-popover-ios:after {
+    background: var(--ion-item-background, var(--ion-background-color, var(--ion-color-primary))) !important;
+  }
+
+  .popover-content.sc-ion-popover-ios {
+    border-radius: 2px;
+  }
+}
+
+.productTypeFilter .popover-wrapper {
+  --width: 40%;
+  --border-radius: 2px !important;
+  --background: transarent;
+
+  // --border-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.12);
+  // --box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  .popover-arrow.sc-ion-popover-ios:after {
+    background: var(--ion-item-background, var(--ion-background-color, var(--ion-color-primary))) !important;
+  }
+
+  .popover-content.sc-ion-popover-ios {
+    border-radius: 2px;
+  }
+}
+
+  .transparentItem {
+    --background: transparent !important;
+    background: transparent !important;
+  }
+
+
+  //Error Message Css
+  .errorMessage {
+    margin: 0px;
+    font-size: 0.8em;
+    color: var(--error-color);
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --background: transparent;
+
+  }
+
+  ion-checkbox .item-cover {
+    display: none;
+  }
+
+  ion-checkbox {
+    position: relative;
+  }
+
+  ion-item ion-input {
+    cursor: pointer !important;
+  }
+
+  ion-item ion-input:hover {
+    cursor: pointer !important;
+  }
+
+  //color when it's active
+  .item-interactive.item-has-focus:not(.ion-valid):not(.errorItem) {
+    --highlight-background: var(--brand-primary);
+  }
+
+  //color when it's active
+  .item-interactive.item-has-focus.ion-valid:not(.errorItem) {
+    --highlight-background: var(--brand-primary);
+  }
+
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+
+  .inputStyle {
+    --background: #F4F4F4;
+    --border-style: solid 1px #4A4A4A;
+    --border-radius: 4px 4px 0 0;
+    --background-activated: #000000;
+    --background-activated-opacity: 1;
+  }
+
+  .alert-tappable.sc-ion-alert-ios,
+  .alert-tappable.sc-ion-alert-md {
+    display: contents;
+  }
+
+  .alert-wrapper.sc-ion-alert-ios,
+  .alert-wrapper.sc-ion-alert-md {
+    max-width: 75vw;
+  }
+
+  .sc-ion-alert-ios .alert-radio-label,
+  .alert-checkbox-label.sc-ion-alert-ios,
+  .alert-checkbox-label.sc-ion-alert-md,
+  .sc-ion-alert-md .alert-radio-label {
+    white-space: pre-line !important;
+  }
+
+  // .layout-container {
+  //   padding-top: 40px;
+  //   width: 95%;
+  //   max-width: 1240px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   padding-bottom: 150px;
+
+  // }
+
+
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  // background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+
+}
+
+.initials {
+  position: relative;
+  top: 25px; /* 25% of parent */
+  font-size: 50px; /* 50% of parent */
+  line-height: 50px; /* 50% of parent */
+  color: #fff;
+  // font-family: "Courier New", monospace;
+  font-weight: bold;
+
+}
+
+
+.arrow-selector {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      height: 40px;
+      letter-spacing: .5px;
+      display: block;
+      background: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 1px solid #d0d7dd;
+      padding: 0 40px 0 15px;
+      background-image: url(/assets/icons/ion-chevron-down-black.svg);
+      background-repeat: no-repeat;
+      background-position: 90% 50%;
+}
+
+ .shadowStyle2 {
+   box-shadow: 7px 7px 2px 16px rgba(0, 0, 0, .12) !important;
+
+ }
+
+  .shadowStyle {
+    box-shadow: 7px 7px 16px 16px rgba(0, 0, 0, .12) !important;
+
+  }
+
+
+  .ionCardButton {
+    --padding-end: 0px; //Right padding if direction is left-to-right,and left padding if direction is right-to-left of the button 
+    --padding-start: 0px; //Left padding if direction is left-to-right,a nd right padding if direction is right-to-left of the button 
+    --inner-padding-start: 0px;
+    --inner-padding-top: 0px;
+    --inner-padding-end: 0px;
+        --padding-bottom: 0px; //Bottom padding of the button 
+        --padding-top: 0px;
+    --background: transparent;                             // Background of the button 
+    //--background-activated:                    //Background of the button when pressed. Note: setting this will interfere with the Material Design ripple. 
+    //--background-activated-opacity:            //Opacity of the button when pressed 
+    //--background-focused:                      // Background of the button when focused with the tab key 
+    //--background-focused-opacity:               // Opacity of the button when focused with the tab key 
+    //--background-hover:                         // Background of the button on hover 
+    //--background-hover-opacity:                 //Opacity of the background on hover 
+    //--border-color:                             //Border color of the button 
+    --border-radius:  12px; width: 16em; padding: 20px;                           //Border radius of the button 
+    // --border-style:                              //Border style of the button 
+    // --border-width:  0px;                           //Border width of the button 
+    //--box-shadow:                               // Box shadow of the button 
+    //--color:                                    //Text color of the button 
+    //--color-activated:                           //Text color of the button when pressed 
+    //--color-focused:                             //Text color of the button when focused with the tab key 
+    //--color-hover:                              //Text color of the button when hover 
+    //--opacity:                                  //Opacity of the button 
+                      //Top padding of the button 
+    // --ripple-color:                            //Color of the button ripple effect 
+    //--transition:                              Transition of the button
+  }
+
+
+  .cstmBtn1 {
+    z-index: 1;
+    width: 40%;
+    font-family: roboto;
+    --opacity: inherit;
+    //--background-activated:                    //Background of the button when pressed. Note: setting this will interfere with the Material Design ripple. 
+    //--background-activated-opacity:            //Opacity of the button when pressed 
+    //--background-focused:                      // Background of the button when focused with the tab key 
+    //--background-focused-opacity:               // Opacity of the button when focused with the tab key 
+    //--background-hover:                         // Background of the button on hover 
+    //--background-hover-opacity:                 //Opacity of the background on hover 
+    //--border-color:                             //Border color of the button 
+    //--border-radius:                             //Border radius of the button 
+    //--border-style:                              //Border style of the button 
+    //--border-width:                             //Border width of the button 
+    //--box-shadow:                               // Box shadow of the button 
+    //--color-activated:                           //Text color of the button when pressed 
+    //--color-focused:                             //Text color of the button when focused with the tab key 
+    //--color-hover:                              //Text color of the button when hover 
+    //--padding-bottom:                           //Bottom padding of the button 
+    //--padding-end:                              //Right padding if direction is left-to-right,and left padding if direction is right-to-left of the button 
+    //--padding-start:                           //Left padding if direction is left-to-right,a nd right padding if direction is right-to-left of the button 
+    //--padding-top:                             //Top padding of the button 
+    //--ripple-color:                            //Color of the button ripple effect 
+    //--transition:                              Transition of the button
+  }
+
+  .authInputRowPadding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .noColPadding {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+  }
+
+  .btn {
+    z-index: 1;
+    font-family: roboto;
+    --opacity: inherit;
+    //--background-activated:                    //Background of the button when pressed. Note: setting this will interfere with the Material Design ripple. 
+    //--background-activated-opacity:            //Opacity of the button when pressed 
+    //--background-focused:                      // Background of the button when focused with the tab key 
+    //--background-focused-opacity:               // Opacity of the button when focused with the tab key 
+    //--background-hover:                         // Background of the button on hover 
+    //--background-hover-opacity:                 //Opacity of the background on hover 
+    //--border-color:                             //Border color of the button 
+    //--border-radius:                             //Border radius of the button 
+    //--border-style:                              //Border style of the button 
+    //--border-width:                             //Border width of the button 
+    //--box-shadow:                               // Box shadow of the button 
+    //--color-activated:                           //Text color of the button when pressed 
+    //--color-focused:                             //Text color of the button when focused with the tab key 
+    //--color-hover:                              //Text color of the button when hover 
+    //--padding-bottom:                           //Bottom padding of the button 
+    //--padding-end:                              //Right padding if direction is left-to-right,and left padding if direction is right-to-left of the button 
+    //--padding-start:                           //Left padding if direction is left-to-right,a nd right padding if direction is right-to-left of the button 
+    //--padding-top:                             //Top padding of the button 
+    //--ripple-color:                            //Color of the button ripple effect 
+    //--transition:                              Transition of the button
+  }
+
+
+
+  // .avatar-circle2 {
+  //   background-color: #ccc;
+  //   border-radius: 50%;
+  //   height: 18rem;
+  //   text-align: center;
+  //   width: 18rem;
+  // }
+
+  // .initials2 {
+  //   font-size: calc(18rem / 2);
+  //   /* 50% of parent */
+  //   line-height: 1;
+  //   position: relative;
+  //   top: calc(18rem / 4);
+  //   /* 25% of parent */
+  // }
+
+}

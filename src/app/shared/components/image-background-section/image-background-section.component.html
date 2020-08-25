@@ -1,0 +1,12 @@
+<section [ngClass]="innerClass ? innerClass + ' section-inner' : ' section-inner'">
+  <div class="section-content">
+    <div class="inner">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <div [ngClass]="bgClass">
+    <div *ngIf="gradient" [ngClass]="gradient" class="bg-gradient"></div>
+    <img loading="lazy" [ngClass]="{'img-bg': true,'img-loaded': imageLoaded}" (deferLoad)="loadedCb()" src="{{ src }}">
+  </div>
+</section>

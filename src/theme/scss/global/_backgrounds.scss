@@ -1,0 +1,19 @@
+@mixin backgroundImgTint($url){
+  background: linear-gradient(
+      rgba($white, 0.6),
+      rgba($white, 0.6)
+    ),
+   url($url)!important;
+}
+.bg-texture {
+  @include backgroundImgTint('assets/backgrounds/bg-pattern.png');
+  @include backgroundImgTint('assets/backgrounds/bg-pattern.svg');
+}
+
+.snopass-gradient {
+  background: linear-gradient(134.61deg, #004992 0%, rgba(74,90,191,0.75) 48.83%, rgba(121,0,146,0.5) 100%);
+}
+
+.image-darken {
+  background-color: rgba(67,70,107,0.8);
+}

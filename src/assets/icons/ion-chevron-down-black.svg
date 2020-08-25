@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>ion-chevron-down-black</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ion-chevron-down-black" fill="#010101" fill-rule="nonzero">
+            <path d="M6.6576761,5.5165122 L11.6843423,0.6920682 C11.8384172,0.5379934 11.9924897,0.5379934 12.1465645,0.6920682 L13.04212,1.5587348 C13.1961948,1.7128096 13.1961948,1.8668822 13.04212,2.020957 L6.8887872,7.9142898 C6.8310091,7.9720679 6.7539729,8.0009565 6.6576761,8.0009565 C6.5613793,8.0009565 6.4843431,7.9720679 6.426565,7.9142898 L0.2732322,2.020957 C0.1191574,1.8668822 0.1191574,1.7128096 0.2732322,1.5587348 L1.1687877,0.6920682 C1.3228625,0.5379934 1.4769351,0.5379934 1.6310099,0.6920682 L6.6576761,5.5165122 Z" id="ion-chevron-down"></path>
+        </g>
+    </g>
+</svg>

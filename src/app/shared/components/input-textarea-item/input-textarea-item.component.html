@@ -1,0 +1,48 @@
+  
+  <!------- Input Holder ---------------------------------------------------->
+  <ion-item style="     --border-radius: 10px 10px 4px 4px; --border-width: 1px;"
+            [ngClass]="  {'errorItem':  errorCondition  }"
+            [lines]="lines">
+
+  <!------- Label -------------------->
+    <ion-label *ngIf="labelPosition !== undefined"
+               [position]="labelPosition"
+               [color]="labelColor">
+      <!------- Label Icon ------------>
+      <ion-icon *ngIf="labelIcon !== undefined"
+                [name]="labelIcon"
+                [slot]="labelIconSlot">
+      </ion-icon>
+      {{label}}  
+    </ion-label>
+
+    <!------- Input --------------------------->
+    <ion-textarea 
+               [formControlName]="controlName"
+               [placeholder]="placeholder"
+               [color]="color"
+            [autoGrow]="autoGrow"
+               [disableControl]="disabled"
+               [readonly]="readonly"
+               
+               [name]="name"
+
+               [autofocus]="autofocus"
+
+               [clearOnEdit]="clearOnEdit"
+               [debounce]="debounce"
+
+               
+               (ionBlur)="ionBlur"
+               (ionChange)="ionChange"
+               (ionFocus)="ionFocus"
+               (ionInput)="ionInput" >
+    </ion-textarea>
+  </ion-item>
+
+    <!------- Input Error Message --------------------------->
+
+    <p [hidden]="!errorCondition"
+       class="errorMessage">
+      {{errorMsg}}
+    </p>

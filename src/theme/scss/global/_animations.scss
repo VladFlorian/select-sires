@@ -1,0 +1,153 @@
+@mixin invalidShake($duration){
+  animation: shake $duration cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(12px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-12px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(12px, 0, 0);
+  }
+}
+
+@mixin zoomIn($duration, $zoomVal) {
+    animation-name: zoomIn;
+    animation-duration: $duration;
+    animation-fill-mode: both;
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale3d($zoomVal, $zoomVal, $zoomVal);
+      }
+      50% {
+        opacity: 1;
+      }
+  }
+}
+
+
+@mixin animatedTranslate($duration, $startOffsetX, $startOffsetY, $endOffsetX,  $endOffsetY) {
+  animation-name: slideInLeft;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translate($startOffsetX, $startOffsetY);
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+        transform: translate($endOffsetX, $endOffsetY);
+    }
+  }
+}
+
+@mixin bounceInfinite($duration, $startXPosition, $endXPosition, $startYPosition, $endYPosition){
+    animation: MoveUpDown $duration linear infinite;
+    @keyframes MoveUpDown {
+        0% {
+            transform: translate($startXPosition,$startYPosition);
+        }
+        50% {
+          transform: translate($endXPosition,$endYPosition);
+        }
+        100% {
+          transform: translate($startXPosition,$startYPosition);
+        }
+    }
+
+}
+
+@mixin fadeIn($duration) {
+  animation-name: fadeIn;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+}
+
+@mixin slideInLeft($time, $offset){
+  animation-name: slideInLeft;
+  animation-duration: $time;
+  animation-fill-mode: both;
+  @keyframes slideInLeft {
+        0% {
+          transform: translateX($offset);
+          visibility: visible;
+      }
+      100% {
+          transform: translateX(0);
+      }
+  }
+}
+
+
+@mixin fadeInUp($duration) {
+  animation-name: fadeInUp;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  100% {
+      opacity: 1;
+      transform: none;
+  }
+}
+
+@mixin fadeInUp($duration) {
+  animation-name: fadeInUp;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+}
+
+@mixin fadeInDown($duration, $offset) {
+  animation-name: fadeInDown;
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  @keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, $offset, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+  }
+
+}
+@mixin slideTop($time, $offset){
+  animation-name: slideTop;
+  animation-duration: $time;
+  animation-fill-mode: both;
+  @keyframes slideTop {
+        0% {
+          transform: translateY($offset);
+          visibility: visible;
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+}

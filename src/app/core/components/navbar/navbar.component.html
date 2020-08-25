@@ -1,0 +1,46 @@
+<!-- Global NavBar ----------------------------------------------------------------------------------------->
+<ion-header class="shadowStyle">
+  <ion-toolbar>
+
+    <!-- Menu Button *Display only in mobile mode* ---------------------->
+    <ion-buttons slot="start"
+                 [hidden]="!isMobileView">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon color="light"
+                    slot="icon-only"
+                    name="menu">
+          </ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+
+    <!-- Logo Image *Show in Desktop Mode ------------------------>
+    <ion-title [ngClass]="{'ion-text-center': isMobileView}"
+               class="titleicon">
+      <img src="assets/logos/logo-header.png"
+           alt="">
+    </ion-title>
+
+    <!-- Profile + Name -Right Nav Bar -------------------------------------------------------------->
+    <ion-buttons slot="end">
+
+      <!-- Profile Icon  --------------------------------->
+      <ion-button (click)="showUserMenu($event)"
+                  class=" profileHoverColor roundedImage">
+        <img src="assets/logos/logo1.png">
+      </ion-button>
+
+      <!-- Name  ------------------------------------------------------------------------------------->
+      <ion-button (click)="showUserMenu($event)"
+                  class="nameHoverColor"
+                  [hidden]="isMobileView"
+                  fill="clear">
+        <ion-label color="light">
+          <b style="text-transform: capitalize !important;">{{user.fullName}}</b>
+        </ion-label>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>

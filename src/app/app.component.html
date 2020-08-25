@@ -1,0 +1,30 @@
+
+<!--Global NavBar ------------------------------------------------------------------------------------------------------------>
+<app-navbar
+            [user]="userObj$"
+            [isMobileView]="isMobileView$ "
+            [selectedPath]="selectedPath"
+            [hidden]="selectedPath.includes('auth') || selectedPath === '/' ">
+</app-navbar>
+
+<!-- Main App Container *Side Menu + Page Router ---------------------------------------------------------------------------------------------------->
+<ion-split-pane class="splitPaneStyle"
+                contentId="main"
+                [when]="!isMobileView$ && !selectedPath.includes('user/onboard') && !selectedPath.includes('auth') && !selectedPath.includes('access/select-access') && selectedPath !=='/'">
+
+  <!-- Side Menu Component ------------------------------------------------->
+  <ion-menu menuId="sideMenu"
+            side="start"
+            class="sideMenuStyle"
+            contentId="main">
+              <app-side-menu [user]="userObj$"
+                             [isMobileView]="isMobileView$"
+                             [selectedPath]="selectedPath"
+                             class="sideMenuStyle"></app-side-menu>
+  </ion-menu>
+
+  <!-- Page Router --------------------------->
+  <ion-router-outlet id="main"
+                     ></ion-router-outlet>
+                     
+</ion-split-pane>

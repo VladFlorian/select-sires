@@ -1,0 +1,63 @@
+@import "../../../../theme/scss/variables";
+
+.admin-header {
+  h1 {
+    @include font-size(4.2);
+    font-weight: 600;
+  }
+
+  margin-bottom: 50px;
+}
+
+
+select.arrow-select {
+  @include font-size(1.2);
+  font-weight: $fontMedium;
+  text-transform: uppercase;
+  height: 40px;
+  letter-spacing: 0.5px;
+  @include selectReset;
+  border: 1px solid #D0D7DD;
+  padding: 0 $space-sm;
+  padding-right: 40px;
+  background-image: url('/assets/icons/ion-chevron-down-black.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+}
+
+
+h1 select {
+  margin-left: $space;
+}
+
+
+
+.admin-header {
+  .btn--icon-right {
+    @include font-size(1.6);
+    padding: 18px 27px;
+
+    .icon {
+      @include font-size(2);
+    }
+  }
+}
+
+.content-empty {
+  width: 100%;
+  background: $white;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  p {
+    @include font-size(2);
+    color: $mid-gray;
+  }
+
+}

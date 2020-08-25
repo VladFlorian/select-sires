@@ -1,0 +1,22 @@
+{
+  "hosting": {
+    "public": "./dist/app",
+    "target": "select-sires",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+
+    "appAssociation": "AUTO",
+    "rewrites": [{
+        "source": "/safe2",
+        "dynamicLinks": true
+      },
+      {
+        "source": "!/safe2",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

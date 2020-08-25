@@ -1,0 +1,70 @@
+<!-- Generated template for the AvatarThumbComponent component -->
+<div [ngClass]="{'avatar-thumb': true, 'avatar--editable':editable}">
+  <!-- small -->
+  <div *ngIf="isSmall && responsive && responsive.sm"
+       [style.width.px]="responsive.sm ? responsive.sm : 'auto' "
+       [style.height.px]="responsive.sm ? responsive.sm : 'auto' "
+       [ngClass]="'avatar-thumb__circle'">
+    <img class="avatar-bg"
+         src="{{src}}"
+         default="https://media3.giphy.com/media/feN0YJbVs0fwA/giphy.gif?cid=790b761145c4746f53ecaffb70a6972d710aace9d21838da&rid=giphy.gif"
+         alt="">
+    <input *ngIf="editable"
+           id="profile-image-input"
+           accept="image/*"
+           (change)="fileChange($event)"
+           type="file"
+           class="input__file-upload--hidden" />
+  </div>
+  <!-- medium -->
+  <div *ngIf="isMedium && responsive && responsive.md"
+       [style.width.px]="responsive.md ? responsive.md : 'auto' "
+       [style.height.px]="responsive.md ? responsive.md : 'auto' "
+       [ngClass]="'avatar-thumb__circle'">
+    <img class="avatar-bg"
+         src="{{src}}"
+         default="https://media3.giphy.com/media/feN0YJbVs0fwA/giphy.gif?cid=790b761145c4746f53ecaffb70a6972d710aace9d21838da&rid=giphy.gif"
+         alt="">
+    <input *ngIf="editable"
+           id="profile-image-input"
+           accept="image/*"
+           (change)="fileChange($event)"
+           type="file"
+           class="input__file-upload--hidden" />
+  </div>
+  <!-- large -->
+  <div *ngIf="isLarge && responsive && responsive.lg"
+       [style.width.px]="responsive.lg ? responsive.lg : 'auto' "
+       [style.height.px]="responsive.lg ? responsive.lg : 'auto' "
+       [ngClass]="'avatar-thumb__circle'">
+    <img class="avatar-bg"
+         default="https://media3.giphy.com/media/feN0YJbVs0fwA/giphy.gif?cid=790b761145c4746f53ecaffb70a6972d710aace9d21838da&rid=giphy.gif"
+         src="{{src}}"
+         alt="">
+    <input *ngIf="editable"
+           id="profile-image-input"
+           accept="image/*"
+           (change)="fileChange($event)"
+           type="file"
+           class="input__file-upload--hidden" />
+  </div>
+  <div *ngIf="dimensions"
+       [style.width.px]="dimensions ? dimensions : 'auto' "
+       [style.height.px]="dimensions ? dimensions : 'auto' "
+       [ngClass]="'avatar-thumb__circle'">
+    <img class="avatar-bg"
+         src="{{src}}"
+         default="https://media3.giphy.com/media/feN0YJbVs0fwA/giphy.gif?cid=790b761145c4746f53ecaffb70a6972d710aace9d21838da&rid=giphy.gif"
+         alt="">
+    <input *ngIf="editable"
+           id="profile-image-input"
+           accept="image/*"
+           (change)="fileChange($event)"
+           type="file"
+           class="input__file-upload--hidden" />
+  </div>
+  <img *ngIf="editable"
+       class="thumbnail-uploadable"
+       src="./assets/icons/add_button@2x.png"
+       alt="">
+</div>

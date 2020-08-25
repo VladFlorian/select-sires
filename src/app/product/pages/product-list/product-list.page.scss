@@ -1,0 +1,136 @@
+@import "../../../../theme/scss/variables";
+
+
+.layout-container2 {
+  padding-top: 40px;
+  width: 95%;
+  max-width: 1240px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#ionRange {
+  --knob-background: var(--ion-color-primary);
+  --pin-color: white;
+  --bar-height: 10px;
+  --bar-border-radius: 7px;
+  --bar-background-active: var(--ion-color-primary);
+  // --bar-background-active:
+  // --pin-background: 
+  // --knob-size: 
+  // --bar-background-active: 
+}
+
+// ion-range.lightnessSlider {
+// &.range-knob-a {
+
+
+//   --knob-background: url('/assets/svg/product/one.svg') no-repeat;
+
+// }
+
+//      &.range-knob-a {
+//        --knob-background: url('/assets/svg/product/two.svg') no-repeat;
+
+//      }
+
+// }
+
+div.mat-chip-list-wrapper {
+  justify-content: center;
+  display: block;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .mat-chip {
+    flex: 0 0 auto;
+  }
+}
+
+.form {
+  width: 700px;
+  max-width: 700px;
+}
+
+
+ion-segment-button {
+  width: calc(100% / 4);
+
+  ion-label {
+    max-width: calc(90vw / 4);
+  }
+}
+
+.maxWidth {
+  width: 700px;
+  max-width: 700px;
+}
+
+
+.profilePicRow {
+  // width: 600px;
+  margin: auto;
+  max-width: 850px;
+}
+
+avatar-thumb {
+  display: table;
+  margin: 0 auto;
+  left: 50%;
+
+  .avatar-thumb__circle {
+    border: 8px solid #69ADD3;
+  }
+}
+
+.snoStyle {
+  --padding-start: 10px;
+  --inner-padding-top: 0px;
+  position: relative;
+  --background: #F4F4F4;
+  border-bottom: solid 1px #4A4A4A;
+  border-radius: 4px 4px 0 0;
+  padding-top: 0px;
+
+  ion-label {
+    padding-bottom: 10px;
+    ;
+    opacity: 1;
+    --color: #69add3;
+
+    color: #4A4A4A;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+  }
+}
+
+
+
+.profileForm {
+  width: 474px;
+  max-width: 474px;
+}
+
+.addCertifcationRow {
+  padding-top: 30px;
+}
+
+ion-popover {
+  --width: 427px;
+}
+
+.btn.btn--add-certification {
+  padding: 15px 20px;
+  background: $layout-emerald;
+  display: table;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 45px;
+
+  i {
+    @include font-size(2);
+    display: table;
+    margin-right: 15px;
+  }
+}

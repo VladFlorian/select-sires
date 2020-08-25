@@ -1,0 +1,29 @@
+.nav-offset {
+  padding-top: 70px;
+  @include media-query-min($md) {
+    padding-top: 85px;
+  }
+}
+
+.sidebar-offset {
+  padding-right: 430px;
+  @include media-query-max(1440px) {
+    padding-left: 8% !important;
+    padding-right: 450px;
+  }
+}
+
+.fix-padding {
+  padding-right: 8% !important;
+}
+
+.layout-container.sidebar-offset {
+  padding-top: 45px;
+  @include media-query-min($md) {
+    padding-top: 60px;
+  }
+  @include media-query-min($lg) {
+    padding-top: 0;
+    padding-left: 200px;
+  }
+}

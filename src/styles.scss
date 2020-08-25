@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+body * {
+  box-sizing: border-box;
+}
+
+a[href],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
+}
+
+@import "./theme/scss/variables";
+@import "./theme/scss/global/modals";
+@import "./theme/scss/global/tables";
+
+@import "./theme/scss/components/_header.scss";
+@import "./theme/scss/components/_navigation.scss";
+@import "./theme/scss/components/_cards.scss";
+@import "./theme/scss/components/_hero.scss";
+@import "./theme/scss/components/_marketing-carousel.scss";
+@import "./theme/scss/pages/_snoday-login.scss";
+@import "./theme/scss/pages/_snoday-results.scss";
+@import "./theme/scss/pages/_settings.scss";
+@import "./theme/scss/pages/_password.scss";
+@import "./theme/scss/_videos.scss";
+
+html {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+}
+
+body {
+  font-family: $bodyFont;
+  // font-family: $font-size-base;
+
+  @include font-size(1.6);
+  letter-spacing: 1px;
+
+  .theme-inverted {
+    color: $white;
+    background: $black;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

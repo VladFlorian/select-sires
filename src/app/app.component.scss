@@ -1,0 +1,17 @@
+.splitPaneStyle {
+  --side-width: var(--sideMenuWidth); //Width of the side pane. Does not apply when split pane is collapsed.
+  //--border:                               //Border between panes
+  // --side-max-width: 300px; //Maximum width of the side pane. Does not apply when split pane is collapsed.
+  //--side-min-width:                       //Minimum width of the side pane. Does not apply when split pane is collapsed.
+
+}
+
+
+.sideMenuStyle {
+--width: var(--sideMenuWidth); //Width of the menu
+//--height:	                                //Height of the menu
+//--max-height:	                            //Maximum height of the menu
+// --max-width: 300px;                            //Maximum width of the menu
+//--min-height:	                            //Minimum height of the menu
+//--min-width:	                            //Minimum width of the menu
+}

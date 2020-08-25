@@ -1,0 +1,27 @@
+//breakpoints
+$xs:320px;
+$sm:577px;
+$md:768px;
+$lg:991px;
+$xl:1200px;
+
+/*Grid*/
+@mixin media-query-min($value, $operator: 'min-width', $query: 'screen') {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+
+@mixin media-query-max($value, $operator: 'max-width', $query: 'screen') {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+
+
+/* ##usage##
+  @include media-query-min(500px) {
+  }
+*/

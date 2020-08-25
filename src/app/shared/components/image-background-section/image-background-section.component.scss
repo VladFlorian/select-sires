@@ -1,0 +1,94 @@
+@import "../../../../theme/scss/variables";;
+
+.img-bg {
+  opacity: 1;
+  transition: all 0.7s linear;
+  // filter: blur(4px);
+  @include fadeIn(0.5s);
+
+  &.img-loaded {
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: 0.5s;
+  }
+}
+
+.image-darken {
+  background-color: rgba(67, 70, 107, 0.8);
+}
+
+@mixin backgroundFormatter($zindex) {
+  z-index: $zindex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section--img-bg {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .section-content, .inner {
+    height: 100%;
+  }
+}
+
+.snopass-gradient {
+  background: linear-gradient(134.61deg, #004992 0%, rgba(74, 90, 191, 0.75) 48.83%, rgba(121, 0, 146, 0.5) 100%);
+}
+
+.marketing-carousel__gradient-bg {
+  background: linear-gradient(315deg, #5E00A2 0%, #162A63 81.29%, #053454 100%);
+  opacity: 0.5;
+}
+
+.bg-img {
+  @include backgroundFormatter(0);
+  $gradientOpacity: 0.75;
+
+  &.bg-blur {
+    filter: blur(10px);
+    transform: scale(1.1);
+  }
+
+  .bg-gradient {
+    @include backgroundFormatter(2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bg-image--gradient {
+  // @include phaseGradient;
+  opacity: 0.75;
+}
+
+.section-content {
+  position: relative;
+  z-index: 3;
+  // border: solid red;
+  height: 100%;
+  // z-index: 3;
+
+  * {
+    height: 100%;
+  }
+}
+

@@ -1,0 +1,8 @@
+{
+  "name": "select-sires-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "1e2e368f"
+}

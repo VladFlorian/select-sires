@@ -1,0 +1,53 @@
+//can be used on the app globally (this is a temp hack until i figure out the $colors functions properly);
+//brand colors;
+
+/*Primary COLORS*/
+$yellow: #fab800;
+$black: #1D1D1E;
+$indigo: #2d2f89;
+$darkBlue: #0A4874;
+$red: #ff5752;
+$green: #7ed321;
+$green-selected: $green;
+$gray-mid: #d6d6d6;
+$lightgrey:  #f4f7f9;
+$mid-gray: #9B9B9B;
+$dark-gray: #4A4A4A;
+/*Brand COLORS*/
+$brand-primary: #69add3;
+$brand-secondary: $darkBlue;
+$brand-tertiary: $indigo;
+$inputHover: #F4F4F4;
+$link-brand-color: #2D2F89;
+
+/*ALERT COLORS*/
+$alert-danger: $red;
+$alert-plain: $gray-mid;
+$alert-primary: #005ea2;
+$alert-secondary: #63c2a0;
+$alert-warning: $yellow;
+$alert-success: $green;
+
+
+/*State colors*/
+$inactive-item: #CBCBCB;
+
+/*Layout Colors*/
+$layout-primary: $lightgrey;
+$layout-secondary: $darkBlue;
+$layout-emerald: #38d285;
+$layout-tertiary: #1d1d1e;
+$layout-offset: #FAFAFA;
+
+$form-label: $dark-gray;
+
+// User images
+$image-border: $dark-gray;
+// $secondary:  $winning;
+// $danger:     $alert-danger;
+
+$white:      #ffffff;
+$purple:     #6938b5;
+$yellow:     #ebc436;
+$blue:       #36a6e3;
+

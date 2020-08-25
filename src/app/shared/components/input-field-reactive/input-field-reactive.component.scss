@@ -1,0 +1,182 @@
+@import "../../../../theme/scss/variables";;
+
+@mixin fieldTypesetting() {
+  @include font-size(2.2);
+}
+
+.input--error {
+  margin-left: auto;
+  display: table;
+  text-align: right;
+  font-weight: $fontSemi;
+  letter-spacing: 0.1px;
+  line-height: 22px;
+  color: $red;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  @include fadeIn(0.15s);
+}
+
+@mixin fieldHover {
+  transition: all 0.15s ease-out;
+  &:hover {
+    background: rgba($inputHover, 1);
+    cursor: pointer;
+  }
+}
+
+.uin-field {
+  input {
+    letter-spacing: 10px;
+  }
+}
+
+.input-field {
+  margin-bottom: 20px;
+  position: relative;
+  background-color: $inputHover;
+  border-bottom: solid 1px $dark-gray;
+  border-radius: 4px 4px 0 0;
+  padding-top: 10px;
+
+  input {
+    padding-left: 10px;
+    line-height: 60px;
+    background: none;
+  }
+
+  &.active {
+    background-color: #e2e2e2;
+    border-bottom: solid 1px $brand-primary;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  .btn--listing-add {
+    margin: 0;
+    display: table;
+    padding: $space;
+    background: $brand-primary;
+    height: 100%;
+    color: $white;
+
+    // i {}
+  }
+
+  &.multi-field {
+    display: flex;
+  }
+
+  &.two-col {
+    display: flex;
+    align-items: center;
+
+    input {
+      color: black;
+      margin: 0;
+      max-width: 60px;
+    }
+
+    .column--value {
+      width: 75%;
+    }
+  }
+
+  .edit-icon {
+    position: absolute;
+    top: $space-sm;
+    right: 0;
+    display: none;
+    @include font-size(2.2);
+    color: $brand-primary;
+  }
+
+  &:hover {
+
+    // show it regularly
+    .edit-icon {
+      display: block;
+    }
+
+    &.field-error {
+
+      // hide it in the error state
+      .edit-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+input,
+textarea {
+  border: none;
+  @include fieldTypesetting;
+  @include fieldHover;
+  width: 100%;
+  outline: none;
+
+  &:focus {
+    border-bottom: solid 2px $brand-primary;
+  }
+}
+
+form-label {
+  position: absolute;
+  z-index: 3;
+  top: 6px;
+  left: 10px;
+  display: block;
+  width: 100%;
+}
+
+.field-listed {
+  ul {
+    margin: 0;
+    padding-left: 18px;
+
+    li {
+      color: $brand-primary;
+      margin: 0;
+      padding: 25px 0;
+      @include fieldHover;
+
+      span {
+        @include fieldTypesetting;
+        color: $black;
+        text-transform: none;
+        margin: 0;
+        font-weight: $fontMedium;
+      }
+    }
+  }
+}
+
+.alert-state {
+  position: absolute;
+  top: $space-sm;
+  right: 0;
+  @include font-size(2.2);
+}
+
+.error-icon {
+  color: $red;
+}
+
+.success-icon {
+  color: $green;
+}
+
+textarea {
+  height: 250px;
+  line-height: 27px;
+}
+
+label.input-focused {
+  color: blue;
+  @include zoomIn(0.15s, 0.15);
+}

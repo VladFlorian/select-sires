@@ -1,0 +1,24 @@
+.theme-inverted {
+  background: $black;
+  position: relative;
+
+}
+
+$triangleHeight: 110px;
+
+.top-triangle__left {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 500;
+  transform: translate(0,-100%);
+  @include triangleLeft(50vw, $triangleHeight, $black);
+}
+.top-triangle__right {
+  position: absolute;
+  top: 0;
+  z-index: 500;
+  width: 50%;
+  transform: translate(0,-100%);
+  @include triangleRight(50vw, $triangleHeight, $black);
+}

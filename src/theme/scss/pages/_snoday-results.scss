@@ -1,0 +1,207 @@
+.bg--snoday-results {
+  h1 {
+    font-family: 'WorkSans-Medium';
+    text-transform: capitalize;
+    @include font-size(6.4);
+    text-align: center;
+  }
+
+}
+.results-container {
+  padding-top: $space-lg;
+}
+.lesson__meta-details {
+  @include font-size(2.4);
+  margin-bottom: $space-lgxxx;
+  text-align: center;
+  font-family: $bodyFont;
+}
+
+.results-summary {
+  i {
+    @include font-size(3.3);
+  }
+}
+
+
+.attributes-font-size {
+  @include font-size(5);
+}
+.results__section-title {
+  position: relative;
+  // padding: $space-lgxxx 0;
+  h2 {
+    line-height: 100%;
+    @include font-size(14);
+    .title-indent  {
+      display: inline-block;
+      transform: translate(50%,0);
+    }
+  }
+}
+$resultSectionHeight: 720px;
+.results__section--summary {
+  position: relative;
+  height: $resultSectionHeight;
+  width: 100%;
+  margin-top: -( $resultSectionHeight / 3);
+  // transform: translate(0,-50%);
+  @include triangleRight(100vw, $resultSectionHeight, $white);
+  .layout-container {
+    position: relative;
+  }
+  .circle {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background-color: #393e97;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: translate(0,-15%);
+    img {
+      max-width: 280px;
+    }
+  }
+  .lesson-summary__text {
+    h2 {
+      font-family: $bodyFont;
+      color: $black;
+      @include font-size(3.8);
+      .deep-purple-text {
+        @include font-size(6.8);
+      }
+    }
+    position: absolute;
+    right: 0;
+    bottom: $resultSectionHeight / 8;
+    z-index: 2;
+    transform: translate(10%,0);
+
+
+  }
+}
+.evaluation-media {
+  border-top: solid  $space-sm $brand-primary;
+  border-radius: $space-sm / 2 ;
+  margin: $space-lgxx auto;
+
+}
+.evaluation-media__col {
+  // border: solid red;
+  height: 400px;
+  &.col--img {
+    cursor: zoom-in;
+    transition: all 0.2s ease-out;
+    opacity: 1;
+    overflow: hidden;
+    // &:hover {
+    //   opacity: 0.5;
+    // }
+    position: relative;
+    img {
+      max-width: none;
+      position: absolute;
+      height: 100%;
+      width: auto;
+      left: 50%;
+      transform: translate(-50%,0);
+
+    }
+  }
+}
+
+.img-circle--instructor {
+  width: 285px;
+  height: 285px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    @include alignBoth;
+
+  }
+}
+
+.instructor-ratings {
+  padding-top:  $space-lgxx;
+  h2 {
+    @include font-size(4.2);
+
+  }
+}
+
+.snopass-progession {
+  padding-top:  $space-lgxx;
+  h2 {
+    @include font-size(4.2);
+  }
+  h3 {
+    @include font-size(3.0);
+  }
+}
+
+.instructor-ratings__evaluate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  i {
+    @include font-size(4.5);
+  }
+}
+.instructor--comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.additional-feedback {
+  margin-top: $space-lgxx;
+  p {
+    @include font-size(1.4);
+    @include titleStyle()
+  }
+  input {
+    @include font-size(2.2);
+    border: none;
+    color: $white;
+    &:focus {
+      color: $white;
+      padding-left: 0;
+    }
+  }
+}
+.tip-instructor {
+  padding: $space-lgxx 0;
+  background: darken($brand-primary, 10%);
+  h2 {
+    @include font-size(3);
+    @include textShadow();
+  }
+  label.btn, .btn.btn-lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:  $unit $space-lgxx;
+    @include font-size(2.1);
+    line-height: 100%;
+  }
+}
+.tip-instructor__form {
+  margin-top: $space;
+}
+$border-radius-val: 50px;
+.btn-group--tips {
+  label:first-child {
+    border-top-left-radius: $border-radius-val;
+    border-bottom-left-radius: $border-radius-val;
+  }
+  label:last-child {
+    border-top-right-radius: $border-radius-val;
+    border-bottom-right-radius: $border-radius-val;
+  }
+}

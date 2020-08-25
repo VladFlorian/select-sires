@@ -1,0 +1,130 @@
+@mixin selectReset() {
+  display: block;
+
+  background: none;
+  appearance: none;
+  border: none;
+}
+
+@mixin alignBottomHorizontal {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
+@mixin absoluteFullHeight(){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin alignBoth {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin triangleBase(){
+  height: 0;
+  padding-top: 50%;
+  overflow: hidden;
+}
+
+
+@mixin triangleLeft($width, $height, $color){
+  /*Down-right pointing*/
+  @include triangleBase();
+    left: 0;
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top:-($height);
+      border-top: $height solid transparent;
+      border-left: $width solid $color;
+    }
+}
+
+@mixin triangleRight($width, $height, $color){
+  /*Down-right pointing*/
+    right: 0;
+    @include triangleBase();
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top:-($height);
+      border-top: $height solid transparent;
+      border-right: $width solid $color;
+    }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+      @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+      @content;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+}
+
+
+@mixin snopassFormUI(){
+  input {
+    line-height: 24px;
+    border: none;
+    display: table;
+    font-weight: 500;
+    @include font-size(3);
+    letter-spacing: 0.24px;
+    border-bottom: solid 2px rgba($brand-primary, 0);
+    &:focus {
+      outline: none;
+      border-bottom: solid 2px rgba($brand-primary, 1);
+
+    }
+  }
+  input {
+  }
+  label {
+    @include font-size(1.4);
+    font-weight: 600;
+    letter-spacing: -0.18px;
+    line-height: 16px;
+    margin-bottom: $space-sm;
+    text-transform: uppercase;
+  }
+
+
+}
+@mixin snopassSubmit(){
+  display: table;
+  margin: auto;
+  margin-top: 30px;
+}
+
+@mixin evaluationContentSpacer {
+  padding-left: $space;
+}
+
+@mixin cardBorder {
+  border: 1px solid $brand-primary;
+  small {
+    color: $black;
+  }
+
+
+}

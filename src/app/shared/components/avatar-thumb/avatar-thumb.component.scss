@@ -1,0 +1,63 @@
+@import "../../../../theme/scss/variables";
+
+.avatar-thumb {
+  position: relative;
+  display: block;
+
+  &.avatar--editable {
+    display: table;
+
+  }
+}
+
+  .avatar-thumb__circle {
+    border: 8px solid #69ADD3;
+  }
+
+// avatar-thumb {
+//   display: table;
+//   margin: 0 auto;
+//   left: 50%;
+
+
+// }
+
+.thumbnail-uploadable {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  transform: translate(-20%, -20%);
+}
+
+.avatar-thumb__circle {
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+  .image-loaded {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    border: solid red;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
+
+.btn--icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

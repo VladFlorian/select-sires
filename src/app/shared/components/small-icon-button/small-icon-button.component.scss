@@ -1,0 +1,21 @@
+
+.iconCardButton {
+
+  &.active {
+
+      border: 3px solid var(--ion-color-primary) !important;
+    h2 {
+      font-weight: 600;
+      color: var(--ion-color-primary) !important;
+    --color: var(--ion-color-primary) !important;
+  
+    }
+
+  }
+
+  &:hover {
+      font-weight: 600;
+      color: var(--ion-color-primary) !important;
+      --color: var(--ion-color-primary) !important;
+  }
+}

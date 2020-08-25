@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="99px" viewBox="0 0 100 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>CAA2A5F7-5B77-4193-87BC-FE6B673B31A1</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-10.5%" y="-12.9%" width="121.0%" height="125.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="24.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="1.0-Admin-Webapp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Admin---Inventory---Modal:-Order-Cards" transform="translate(-952.000000, -150.000000)" fill="#4A4A4A">
+            <g id="Modal---Add" filter="url(#filter-1)" transform="translate(333.000000, 163.472656)">
+                <polygon id="ion-ios-close-empty" points="677.234375 26.6523438 678.390625 27.8085938 670.296875 35.9023438 678.390625 43.9960938 677.234375 45.1523438 669.140625 37.0585938 661.046875 45.1523438 659.890625 43.9960938 667.984375 35.9023438 659.890625 27.8085938 661.046875 26.6523438 669.140625 34.7460938"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

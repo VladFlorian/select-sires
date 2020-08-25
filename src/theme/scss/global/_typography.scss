@@ -1,0 +1,198 @@
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+@mixin formLabel() {
+  display: block;
+  @include font-size(1.2);
+  font-weight: 500;
+  line-height: 16px;
+  &.active {
+    color: $brand-primary;
+  }
+}
+
+$bodyFont:'Work Sans', sans-serif;
+$font-family-sans-serif: $bodyFont!default;
+// $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+// $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif!default;
+@mixin titleStyle(){
+    font-family: $bodyFont;
+    @include font-size(1.2);
+    text-transform: uppercase;
+    @include media-query-min($lg) {
+      @include font-size(1.4);
+    }
+}
+
+@mixin textShadow(){
+  text-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+}
+
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+$font-size-base: 1.8rem;
+$fontRegular: 400;
+$fontMedium: 500;
+$fontSemi: 600;
+$fontBold: 700;
+
+
+.btn {
+  @include font-size(1.8);
+  // text-transform: none;
+  &.btn-lg {
+    @include font-size(1.8);
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $fontSemi;
+  .theme-inverted & {
+    color: $white;
+  }
+}
+p {
+  margin: 0;
+
+}
+b {
+  font-weight: $fontSemi;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  @include font-size(1.6);
+  font-weight: $fontSemi;
+  letter-spacing: 0.8px;
+
+}
+input.form-control {
+  letter-spacing: 1px;
+  &:focus {
+    background: none;
+    border-color: $white;
+  }
+}
+.theme-inverted pre {
+  color: $white;
+}
+.title {
+
+  @include font-size(1.4);
+}
+
+.text--inline-img {
+  font-family: $bodyFont;
+  display: flex;
+  align-items: center;
+  &.inline-img--logo {
+    img {
+      height: 1.2rem;
+      margin-left: 1rem;
+    }
+
+  }
+}
+.text-tnc {
+  @include font-size(1);
+  text-align: center;
+  line-height: 16px;
+  letter-spacing: 0.08px;
+}
+.dev-note {
+  &:before {
+    content: 'dev note: '
+  }
+  font-style: italic;
+  color: $red;
+  font-size: 12px!important;
+  margin: 0;
+}
+
+header.content-header {
+  h1 {
+    text-align: center;
+    @include font-size(3);
+    line-height: 35px;
+    letter-spacing: 0.24px;
+    margin-top: $space-lg;
+    margin-bottom: 30px;
+    font-weight: $fontBold;
+  }
+  @include media-query-min($md) {
+      h1 {
+        @include font-size(4.2);
+        text-align: left;
+        margin-bottom: 55px;
+        letter-spacing: 0.34px;
+      }
+  }
+  @include media-query-min($lg) {
+    h1 {
+
+    }
+  }
+  &.header-two-col {
+    margin-top: 30px;
+    h1 {
+      margin: 0;
+    }
+    @include media-query-max($md) {
+      h1 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.required {
+  color: $red;
+}
+
+
+.field-error {
+  color: $red;
+  @include font-size(1.2);
+  // @include fadeIn(1s);
+}
+.criteria-title {
+  @include titleStyle();
+  // margin-top: $space;
+  color: $black;
+  line-height: 100%;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.62px;
+
+}
+
+.todo {
+  position: relative;
+  &:before {
+    content: 'todo:';
+    color: $red;
+    @include font-size(1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%,0);
+  }
+}
+
+.task-title {
+  @include font-size(3.8);
+  line-height: 44px;
+  letter-spacing: -0.32px;
+  font-weight: $fontSemi;
+  margin: 0;
+  @include media-query-max($md) {
+    @include font-size(2.4);
+
+  }
+}

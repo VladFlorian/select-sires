@@ -1,0 +1,47 @@
+  
+  <!------- Input Holder ---------------------------------------------------->
+  <ion-item type="button"
+            [ngClass]="  {'errorItem':  errorCondition  }"
+            [lines]="lines">
+
+  <!------- Label -------------------->
+    <ion-label *ngIf="labelPosition !== undefined"
+               position="labelPosition"
+               color="labelColor">
+      <!------- Label Icon ------------>
+      <ion-icon *ngIf="labelIcon !== undefined"
+                [name]="labelIcon"
+                [slot]="labelIconSlot">
+      </ion-icon>
+      {{label}}  
+    </ion-label>
+
+    <!------- Input --------------------------->
+    <ion-input style="cursor: pointer;"
+               [datePickerDirective]="datePickerObj"
+               [formControlName]="controlName"
+               [placeholder]="placeholder"
+               [type]="type"
+               [color]="color"
+               [disableControl]="disabled"
+               [readonly]="readonly"
+               [name]="name"
+               [clearInput]="clearInput"
+               [clearOnEdit]="clearOnEdit"
+               [mode]="mode"
+               (ionBlur)="ionBlur"
+               (ionChange)="ionChange"
+               (ionFocus)="$event.preventDefault()"
+               (ionInput)="ionInput"
+(focus)="$event.preventDefault()"
+
+               >
+    </ion-input>
+  </ion-item>
+
+    <!------- Input Error Message --------------------------->
+    <p [hidden]="!errorCondition"
+       class="errorMessage">
+      {{errorMsg}}
+    </p>
+

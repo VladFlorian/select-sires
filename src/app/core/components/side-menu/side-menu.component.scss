@@ -1,0 +1,57 @@
+
+.sideMenuContainer {
+    --padding-top: 56px;
+    --background: #FAFAFA;
+}
+
+.accessSelectButton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+      --background-activated: var(--ion-color-primary);
+    --color-activated: white;
+    --detail-icon-color: var(--ion-color-primary);
+    --detail-icon-opacity: 1;
+}
+
+.profileHoverColor {
+  --background-hover: #69ADD3 !important;
+  --background-hover-opacity: 0.4 !important;
+}
+
+.nameHoverColor {
+  --background-hover-opacity: 0.3 !important;
+}
+
+
+    .active-item {
+        border-left: 8px solid var(--ion-color-primary);
+
+        ion-label {
+            --color: var(--ion-color-primary);
+        }
+
+        .icon-inner {
+            color: var(--ion-color-primary);
+        }
+
+        ion-icon {
+            color: var(--ion-color-primary);
+        }
+
+        --detail-icon-color: var(--ion-color-primary)
+    }
+
+.roundedImage {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #69ADD3 !important;
+
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+}

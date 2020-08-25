@@ -1,0 +1,387 @@
+$buttonHorizontalPadding: 70px;
+$buttonBorderRadius: 50px;
+
+@mixin circularButton($size){
+  width: $size;
+  height: $size;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: none;
+}
+.btn--student {
+  background: transparent;
+}
+button.btn--invisible {
+  background: none;
+  border: none;
+  * {
+    outline: 0;
+  }
+  &:focus {
+    appearance: none;
+    outline: 0;
+    border: none;
+    border: none;
+  }
+}
+.btn--add-student {
+  i {
+    color: $white;
+  }
+  @include circularButton(145px);
+  border-style: dashed;
+  border: solid 3px $brand-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  &.background-full {
+    background: $brand-primary;
+    border: none;
+  }
+}
+button.link {
+  background: transparent;
+}
+.btn {
+    text-transform: uppercase;
+    background: $brand-primary;
+    transition: all 0.25s ease-out;
+    letter-spacing: 1.5px;
+    color: $white;
+    font-weight: 600;
+    line-height: 100%;
+    display: table;
+    padding: $space-sm $buttonHorizontalPadding;
+    display: inline-block;
+    @include font-size(1.6);
+    border: none;
+    border-radius: $buttonBorderRadius;
+    letter-spacing: 1.5px;
+    &:hover {
+        opacity: 0.8;
+        background-color: rgba($brand-primary, 0.8);
+    }
+    &.btn--blue {
+      background: $indigo;
+    }
+
+    &.btn--red {
+      background: $red;
+    }
+    &.btn--yellow {
+      background: $yellow;
+    }
+    &.btn--flat {
+      padding: $space-sm;
+      border-radius: 0;
+    }
+}
+button.btn.btn-link {
+  background: none;
+  color: $indigo;
+  padding: 0;
+  font-weight: 400;
+  display: table;
+  text-decoration: underline;
+  @include font-size(1.6);
+  border-radius: 0;
+}
+.btn--transparent {
+  background: transparent;
+  border-radius: 0;
+  color: $brand-primary;
+
+}
+.btn.btn--sm {
+  padding: $space-sm  $space;
+}
+
+.btn.btn--md {
+    padding: $space-md  $buttonHorizontalPadding;
+}
+
+.btn.btn--lg {
+    padding: $space-lg  $buttonHorizontalPadding;
+    @include font-size(2.2);
+}
+
+.btn[disabled]{
+    background-color: rgba($brand-primary, 0.4);
+    opacity: 1;
+    color: rgba($white, 0.3);
+}
+
+.btn--arrow {
+    position: relative;
+    ion-icon {
+        padding: 0;
+        position: absolute;
+        right:  $space;
+        top: 50%;
+        transform: translate(0,-50%);
+        color: rgba($black, 0.3);
+    }
+}
+.btn.btn--dark {
+  min-width: initial;
+  background: $brand-secondary;
+}
+.btn.btn--icon-right {
+    i {
+      color: $white!important;
+        margin-left: 8px;
+    }
+}
+
+.btn--icon-left {
+    i {
+        margin-right: 8px;
+    }
+
+}
+.btn-secondary {
+    background-color: $brand-secondary;
+    text-shadow: 0 0 6px 0 rgba(0,0,0,0);
+    letter-spacing: 2px;
+    font-weight: 600;
+    &:hover {
+        text-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+        background-color: #2C2C2C;
+    }
+}
+.btn--outline {
+    background: transparent;
+    border: dashed 3px $brand-primary;
+    color: $brand-primary;
+    &:hover {
+        background: $brand-primary;
+        color: $white;
+        opacity: 1;
+    }
+    &.outline-solid {
+      border-style: solid;
+    }
+}
+.theme-inverted {
+  .btn.btn--dark {
+    background: rgba($brand-secondary, 0.8);
+  }
+}
+.btn-secondary-circle {
+  background: $brand-secondary;
+  margin-top: -30px;
+  margin-left: 110px;
+  position:absolute;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.btn-help-circle {
+  background: $brand-secondary;
+  position:absolute;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.btn-green {
+  background: $brand-green;
+  border: none;
+  &:hover {
+    background: lighten($brand-secondary, 10%);
+  }
+}
+.btn.btn-rounded {
+  padding: 15px 55px;
+  border-radius: 100px;
+  @include font-size(1.4);
+  &.btn-small {
+    padding: 15px 25px;
+  }
+}
+
+.btn-row {
+    display: flex;
+    button:first-child {
+        margin-right: $space;
+    }
+    .btn {
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    }
+}
+
+.btn--add {
+    padding: $space-sm-x $space-lg;
+    background-color: $green;
+    &:hover {
+        background-color: $green;
+    }
+}
+
+.btn--icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $brand-primary;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.button--block {
+    width: 100%;
+    background-color: $brand-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(3);
+    height: 100px;
+    color: $white;
+
+    text-transform: capitalize;
+    img  {
+      margin-left: $space;
+    }
+
+    ion-icon {
+      color: $black;
+    }
+}
+.btn--group {
+    margin: 0;
+    display: flex;
+    button {
+        box-shadow: none;
+        border-radius: 0;
+        &:first-child {
+            border-top-left-radius: $buttonBorderRadius;
+            border-bottom-left-radius: $buttonBorderRadius;
+        }
+        &:last-child {
+            border-top-right-radius: $buttonBorderRadius;
+            border-bottom-right-radius: $buttonBorderRadius;
+        }
+    }
+}
+
+.btn--leftjust {
+ margin-right: auto;
+}
+.btn-annotation {
+  background: $black;
+  border-radius: 17px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  padding: 10px $space-sm;
+}
+
+.keypad-col {
+  width: percentage(1/3);
+  margin-bottom: $space-md;
+}
+
+
+.keypad__button:active{
+  background-color: rgba(255,255,255,0.3);
+}
+.keypad__button.delete{
+button.activated {
+  background-color: rgba(255,255,255,0.0);
+}
+
+}
+.keypad-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+      text-align: center;
+      color: $white;
+      line-height: 100%;
+  }
+
+}
+.keypad-number {
+  @include font-size(3.6);
+}
+
+.keypad-alpha {
+  margin-top: $unit;
+
+}
+
+.keypad__button {
+  margin: auto;
+
+  @include circularButton(80px);
+  background-color: transparent;
+  border: solid 2px $white;
+  .label, .sub-label {
+    align-self: center;
+    color: $white;
+
+  }
+  .label {
+    @include font-size(3);
+    line-height: 100%;
+  }
+  .sub-label {
+    @include font-size(1.4);
+    letter-spacing: 4px;
+  }
+
+  .label, .sub-label {
+    align-self: center;
+    width: 100%;
+  }
+  &.delete {
+    border: none;
+    button {
+      color: $white;
+    }
+  }
+}
+.confirmation-buttons {
+  margin-top: 200px;
+  button:first-child {
+    margin-right: $space;
+  }
+}
+button.btn {
+  margin: 0;
+}
+
+
+// psia lesson buttons
+.button--gradient-text {
+  box-shadow: 1px 2px 6px 0 rgba(0,0,0,0.2);
+  padding: 5px 30px;
+  line-height: 21px;
+  @include font-size(1.8);
+  letter-spacing: 0.15px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px 0 rgba(0,0,0,0.2);
+  background:  linear-gradient(90deg, #007CF8 0%, #FF0083 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: $fontRegular;
+  margin:0 auto;
+  display: table;
+  span {
+    font-weight: $fontMedium;
+  }
+}

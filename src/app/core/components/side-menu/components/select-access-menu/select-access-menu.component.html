@@ -1,0 +1,18 @@
+  <!-- User Access Profile ---------------------------------------------------->
+  <ion-item lines="full"
+            (click)="selectUserProfile()"
+            button
+           >
+    <ion-thumbnail slot="start"
+                   class="profileHoverColor roundedImage">
+      <img src="assets/logos/logo-header.png">
+    </ion-thumbnail>
+    <ion-label class="ion-text-wrap"><b>Personal Account</b></ion-label>
+  </ion-item>
+
+    <!-- Empty Item For CSS Styling Hack On Mobile ----------------------------->
+    <ion-item [hidden]="!isMobileView"
+              button
+              (click)="closeMenu()"
+              style="opacity: 0 !important;" class="transparent">
+    </ion-item>

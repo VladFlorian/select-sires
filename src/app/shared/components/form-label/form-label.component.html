@@ -1,0 +1,8 @@
+<label [ngClass]="{'active':active,'error': error}">
+  <span>
+    <ng-content></ng-content>
+  </span>
+  <span class="label-error" *ngIf="error && errorMessage">
+      {{ errorMessage }}
+  </span>
+</label>

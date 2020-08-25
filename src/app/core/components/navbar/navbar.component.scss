@@ -1,0 +1,15 @@
+// -- Navbar - background color --
+ion-toolbar {
+  --background: var(--black);
+}
+
+// -- Navbar - Right Profile Picture ------->
+.profileHoverColor {
+ --background-hover: #69ADD3 !important;
+--background-hover-opacity: 0.4 !important;
+}
+
+// -- Navbar - Right Name --------------------->
+.nameHoverColor {
+   --background-hover-opacity: 0.3 !important;
+}

@@ -1,0 +1,24 @@
+<ng-container>
+  <ion-item  button
+            lines="none"
+            detail="false"
+            class="ion-no-padding ionCardButton ion-activatable ripple-parent">
+    <ion-ripple-effect></ion-ripple-effect>
+
+    <!-- Card Container ------------------------------------------------------------------------------------------->
+    <ion-card style="box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2); border-radius: 12px; height: 16em; width: 16em; padding: 20px;"
+              class="iconCardButton ion-padding ion-text-center">
+
+      <!-- Avatar Circle With Initials -->
+      <div class="avatar-circle"
+           [style.background-color]="getAvatarBackgroundColor()">
+        <span class="initials">{{initials}}</span>
+      </div>
+
+      <!-- Name + User Type Text  ---------------------->
+      <h5 class="ion-text-wrap"> <b style="text-transform: capitalize;">{{fullName}}</b></h5>
+      <b class="ion-text-wrap">{{label}}</b>
+    </ion-card>
+  </ion-item>
+</ng-container>
+      

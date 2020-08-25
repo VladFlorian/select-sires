@@ -1,0 +1,25 @@
+.modal-dialog {
+	.modal-content {
+		border-radius: 0.75rem;
+	}
+
+	.modal-header {
+		border-bottom-style: none;
+
+		.close {
+			right: 16px;
+			color: #4A4A4A;
+			font-size: 3.5rem;
+			font-weight: 400;
+			z-index: 1;
+		}
+	}
+
+	.modal-body {
+		padding: 4rem;
+	}
+
+	@media (min-width: 576px) {
+		margin-top: 160px;
+	}
+}

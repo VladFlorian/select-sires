@@ -1,0 +1,45 @@
+ion-content {
+  --background: #ffffff url('/../../assets/images/back5.jpg') no-repeat center center / cover;
+
+}
+
+.fullViewHeight {
+  height: 90vh;
+}
+
+
+.signInBtn {
+  z-index: 1;
+  width: 40%;
+  --background: #7e7e7e;
+  --color: rgb(0, 0, 0);
+  font-family: roboto;
+  --opacity: inherit;
+}
+
+.logoImg {
+  height: 40%;
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+
+
+.agreeToTermsCheckBoxItem.ion-activatable {
+    --padding-start: 10px;               //Left padding if direction is left-to-right,and right padding if direction is right-to-left of the item 
+   --background-hover: transparent;       // Background of the button on hover 
+ 
+  ion-text {
+      position: relative;
+      z-index: 10;
+    }
+}
+
+.cardBackground {
+  --background: var(--auth-card-background);
+  padding-bottom: 0px;
+
+  ion-card-content {
+    padding-bottom: 0px;
+  }
+}

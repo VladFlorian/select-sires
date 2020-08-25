@@ -1,0 +1,16 @@
+
+.iconCardButton {
+
+  &.active {
+    h2 {
+      color: var(--ion-color-primary) !important;
+    --color: var(--ion-color-primary) !important;
+    }
+
+  }
+
+  &:hover {
+       color: var(--ion-color-secondary) !important;
+       --color: var(--ion-color-secondary) !important;
+  }
+}

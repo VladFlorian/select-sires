@@ -1,0 +1,21 @@
+  <div class="front-desk-cont">
+    <div class="snopass-flow__sidebar list-group menu_btn">
+      <ul>
+        <div class="lastOne" *ngFor="let menuItem of menuItems; last as isLastItem;">
+        <li [ngClass]="{'visited-link': currentPageNum > menuItem.pageNumber}">
+          <button class="oldBtn"
+                  [ngClass]="{'active': currentPageNum === menuItem.pageNumber, 'lastItem': isLastItem}"
+                  [disabled]="menuItem.pageNumber > currentPageNum "
+                  (click)="pageChange(menuItem.pageNumber)">
+            <div class="active-snopass__indicator">
+              <span class="asideCircle"
+                    [ngClass]="{'visited': currentPageNum > menuItem.pageNumber ,'active': currentPageNum === menuItem.pageNumber, 'indicator--mutlistep':true}">
+              </span>
+            </div>
+            {{menuItem.label}}
+          </button>
+        </li>
+        </div>
+      </ul>
+    </div>
+  </div>

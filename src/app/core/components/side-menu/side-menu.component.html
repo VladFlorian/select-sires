@@ -1,0 +1,43 @@
+  <ion-content class="sideMenuContainer"
+               style="height: 100vh;">
+
+    <ion-list class="transparentItem">
+
+   
+      <!--User Dashboard Button ------------------------------------------------->
+      <ion-item (click)="goToUserDashboardPage()"
+                [class.active-item]="selectedPath.startsWith('/user/dashboard')"
+                lines="full"
+                button
+                class="transparentItem sideMenuItem">
+        <ion-icon name="home"
+                  slot="start"></ion-icon>
+        <ion-label><b>Dashboard</b></ion-label>
+      </ion-item>
+
+      <!--User Products Button ------------------------------------------------->
+      <ion-item (click)="goToProductsPage()"
+                [class.active-item]="selectedPath.startsWith('/products')"
+                lines="full"
+                button
+                class="transparentItem sideMenuItem">
+        <ion-icon name="flask"
+                  slot="start"></ion-icon>
+        <ion-label><b>Products</b></ion-label>
+      </ion-item>
+
+    </ion-list>
+
+    <!-- Access Selection *Very Bottom* -------------------------------------------------------------->
+    <ion-item lines="full"
+              button
+              detail
+              (click)="showSelectAccessProfileMenu($event)"
+              class=" accessSelectButton transparentItem sideMenuItem">
+      <ion-label class="ion-text-wrap">
+        <b >Personal Account</b>
+
+      </ion-label>
+    </ion-item>
+
+  </ion-content>

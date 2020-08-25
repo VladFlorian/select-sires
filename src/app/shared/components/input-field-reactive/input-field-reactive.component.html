@@ -1,0 +1,52 @@
+<div [ngClass]="{'active':fieldActive, 'errorItem': errorCondition }"
+     class="input-field">
+
+  <!-- Form Label -->
+  <form-label *ngIf="label"
+              [ngClass]="{'errorItem': errorCondition}"
+              [active]='fieldActive'>
+    {{ label }}
+  </form-label>
+
+  <!-- Differnt Input Types /TextArea/Input -->
+  <div autosize
+    [ngClass]="{'multi-field': listed, 'two-col': valueLabel, 'uin-field': this.type === 'uin' }"
+       class="input-wrapper">
+
+    <!-- Text Area Input -->
+    <textarea *ngIf="element === 'textarea'"
+              type="text"
+              [name]="name ? name : 'default'"
+              [disableControl]="disabled"
+              [placeholder]="placeholder ? placeholder : '' "
+              [formControlName]="controlName"
+              (focus)="focusFunction()"
+              (input)="onChange()"
+              (blur)="blurFunction()"
+              (change)="blurFunction()"
+              (keypress)="handleKeyPress($event)"
+              >
+    </textarea>
+
+    <!-- Input -->
+    <input [mask]="mask ? mask : false"
+           *ngIf="element !== 'textarea' || !element"
+           [type]="activeType"
+           [name]="name ? name : 'default'"
+           [disableControl]="disabled"
+           [placeholder]="placeholder ? placeholder : '' "
+           [formControlName]="controlName"
+           (focus)="focusFunction()"
+           (input)="onChange()"
+           (keypress)="handleKeyPress($event)"
+           (blur)="blurFunction()"
+           (change)="blurFunction()"
+           />
+  </div>
+
+  <!-- Error Message -->
+  <p [hidden]="!errorCondition"
+     class="input--error ">
+    {{errorMsg }}
+  </p>
+</div>

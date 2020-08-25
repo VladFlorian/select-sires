@@ -1,0 +1,161 @@
+/*
+  login forms, reset password form, create password form styles
+*/
+
+.snofolio-landing {
+  background: #F4F7F9;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.landing__links {
+  display: table;
+  padding: 25px 65px;
+  margin: 0 auto;
+  text-align: center;
+  background: $white;
+  box-shadow: 2px 10px 19px 0 rgba(0,0,0,0.2);
+  max-width: 400px;
+  .title {
+    @include font-size(1.8);
+    margin-bottom: 10px;
+    font-weight: $fontMedium;
+  }
+  .subtext {
+    margin-bottom: $space;
+  }
+  a.btn  {
+    @include font-size(1.4);
+    letter-spacing: 0.8px;
+    padding: 20px 50px;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+}
+
+select.arrow-select {
+  @include font-size(1.2);
+  font-weight: $fontMedium;
+  text-transform: uppercase;
+  height: 40px;
+  letter-spacing: 0.5px;
+  @include selectReset;
+  border: 1px solid #D0D7DD;
+  padding: 0 $space-sm ;
+  padding-right: 40px;
+  background-image: url('/assets/icons/ion-chevron-down-black.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 50% ;
+}
+
+
+
+input{
+  box-sizing: border-box;
+  &.form-control {
+    @include font-size(2.2);
+  }
+
+}
+label {
+  color: $form-label;
+}
+
+input {
+  @include placeholder {
+    font-weight: 400;
+    color: $gray-mid;
+  }
+
+
+}
+
+label.required {
+  &:after {
+    content:' *';
+    color: $red;
+  }
+}
+
+.admin-form {
+  button-row {
+      display: block;
+      margin: 50px 0;
+  }
+
+textarea {
+  // white-space: pre;
+  resize: none;
+  min-height: 150px;
+}
+textarea.form-control, input.form-control{
+
+  border: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  box-shadow: inset 0 -1px 0 0 $mid-gray;
+  border-radius: 0;
+  &:focus {
+      box-shadow: none;
+      outline: none;
+      border: none;
+      box-shadow: inset 0 -1px 0 0 $brand-primary;
+
+  }
+  @include media-query-min($xl) {
+      // box-shadow: none;
+      background-color: rgba(#F4F4F4, 0);
+      transition: all 0.5s ease-out;
+      &:hover {
+          background-color: #F4F4F4;
+          background-color: rgba(#F4F4F4, 1);
+      }
+  }
+}
+
+label {
+    font-weight: 600;
+    @include font-size(1.4);
+    color: $black;
+    line-height: 16px;
+    letter-spacing: -0.18px;
+    &.active {
+        color: $brand-primary;
+    }
+
+}
+// .form-field {
+//     margin-bottom: 50px;
+//     @include media-query-min($md) {
+//         margin-bottom: 60px;
+//     }
+//     @include media-query-min($lg) {
+//         margin-bottom: 80px;
+//     }
+// }
+button-row {
+    display: block;
+    margin-bottom: 50px;
+}
+}
+
+.select-container {
+  position: relative;
+  @include selectReset();
+  .form-chevron {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: -1;
+  }
+}

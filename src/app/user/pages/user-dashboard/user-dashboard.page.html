@@ -1,0 +1,69 @@
+<ion-content>
+  <div class="layout-container">
+    <ion-grid class=" ion-padding-top">
+
+      <!-- 1st Row ------------------------------------------------------------------------>
+      <ion-row class="summary-icon-row" style="padding-top: 70px;">
+        <!-- Items SOLD-->
+        <ion-col class="">
+          <summary-icon [icon]="'./assets/icons/icon1.svg'"
+                        [quantity]="0"
+                        [label]="'ITEMS SOLD'">
+          </summary-icon>
+        </ion-col>
+
+        <!-- Items Pending-->
+        <ion-col class="">
+          <summary-icon [icon]="'./assets/icons/icon1.svg'"
+                        [quantity]="0"
+                        [label]="'Pending Delivery'">
+          </summary-icon>
+        </ion-col>
+
+        <!-- Items In Stock-->
+        <ion-col class="">
+          <summary-icon icon='./assets/icons/icon1.svg'
+                        [quantity]="0"
+                        label='ITEMS IN STOCK'>
+          </summary-icon>
+        </ion-col>
+      </ion-row>
+
+      <!-- 2nd Row ----------------------------------------------------------------------->
+      <ion-row class="summary-icon-row">
+        <!-- Customers-->
+        <ion-col class="">
+          <summary-icon icon='assets/icons/icon1.svg'
+                        [quantity]="0"
+                        label='CUSTOMERS'>
+          </summary-icon>
+        </ion-col>
+
+        <!-- Total Customers -->
+        <ion-col class="">
+          <summary-icon icon='assets/icons/icon1.svg'
+                        [quantity]="0"
+                        label='Total Customers'>
+          </summary-icon>
+        </ion-col>
+
+        <!-- Employees-->
+        <ion-col class="">
+          <summary-icon icon='assets/icons/icon1.svg'
+                        [quantity]="0"
+                        label='Employees'>
+          </summary-icon>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+    <h2>History</h2>
+    
+    <div class="content-empty">
+      <p>Nothing To display yet.</p>
+    </div>
+
+  </div>
+</ion-content>

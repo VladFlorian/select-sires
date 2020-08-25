@@ -1,0 +1,10 @@
+  <ion-card  [ngClass]="{'active': active}"
+            style="box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 12px; height: 150px; width: 200px;"
+            class="iconCardButton ion-padding ion-text-center"
+            (click)="buttonClick()"
+            button>
+    <img style="height: 89px; width: 89px;" [src]="(active) ? activeIconUrl : inactiveIconUrl" />
+    <h2 class="ion-text-wrap"
+        [hidden]="label === ''">{{label}}</h2>
+  </ion-card>

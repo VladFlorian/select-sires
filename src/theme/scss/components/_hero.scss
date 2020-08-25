@@ -1,0 +1,79 @@
+
+@mixin heroDefaults(){
+    z-index: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    // background-attachment: fixed;
+    height: 40vh;
+    min-height: 420px;
+    .layout-container {
+        position: relative;
+        height: 100%;
+    }
+}
+avatar-thumb.hero__admin-logo {
+  position: absolute;
+  top: 0;
+  transform: translate(0,-200px);
+  z-index: 40;
+  display: table;
+}
+
+
+image-background-section.hero--dashboard {
+  display: block;
+  height: 50vh;
+  min-height: 470px;
+  overflow: visible;
+}
+.hero {
+    position: relative;
+    // border: solid green;
+    @include heroDefaults();
+}
+.hero-avatar {
+    // background: $brand-primary;
+    // border: solid $brand-primary 2px;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      max-width: none;
+      width: auto;
+    }
+}
+
+.hero-triangle {
+  @include triangleLeft(100vw, 110px, $white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+// .hero--offset {
+//     transform: translate(0, -150px);
+// }
+  // .top-background {
+  //   z-index: 4;
+  //   position: relative;
+
+  //   background-size: cover;
+  //   background-position: bottom;
+  //   background-repeat: no-repeat;
+  //   width: 100%;
+  //   height: 320px;
+  // }

@@ -1,0 +1,109 @@
+<ion-content>
+  <form [formGroup]="formObj">
+    <div class="layout-container">
+      <ion-grid>
+
+        <!-- Go Back Button Button Row ------------------------------->
+        <ion-row style="margin-top: 40px;">
+          <div class="ion-align-self-center ion-justify-self-start">
+            <ion-button (click)="goBack()"
+                        fill="clear"
+                        slot="start">
+              Go Back
+              <ion-icon slot="icon-only"
+                        name="arrow-back"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-row>
+
+        <!-- Page Title/Header Row ---------------------------------------------->
+        <ion-row class="   ion-align-content-center ion-justify-content-center">
+          <div>
+            <ion-label class="ion-text-center ion-text-wrap"
+                       style="font-weight: 600; font-size: 23px;">
+              Add New Product
+            </ion-label>
+          </div>
+        </ion-row>
+
+        <!-- Product Name + Price Row ---------------------------------------------------------------------->
+        <ion-row style="padding-top: 40px;"
+                 class=" ion-padding-bottom authInputRowPadding ion-justify-content-center">
+          <ion-col size-sm="12"
+                   size-lg="5">
+
+            <!-- Name -------------------------------------------------------------------------------------->
+            <cstm-input-item class="cstm-item"
+                             [errorCondition]="formObj.get('name').invalid && formObj.get('name').touched"
+                             [errorMsg]="errorMsgs.name"
+                             placeholder="Product Name*"
+                             controlName="name">
+            </cstm-input-item>
+          </ion-col>
+
+          <!-- Price --------------------------------------------------------------------------------------->
+          <ion-col size-sm="12"
+                   size-lg="2"
+                   class="ion-justify-content-end">
+            <cstm-input-item class="cstm-item"
+                             type="number"
+                             inputmode="decimal"
+                             min="0"
+                             mask="price"
+                             [errorCondition]="formObj.get('price').invalid && formObj.get('price').touched"
+                             [errorMsg]="errorMsgs.price"
+                             placeholder="Price*"
+                             controlName="price">
+            </cstm-input-item>
+          </ion-col>
+        </ion-row>
+
+        <!-- Description Row --------------------------------------------------------------------------------------------------->
+        <ion-row class=" ion-padding-bottom authInputRowPadding ion-justify-content-center">
+          <ion-col size-sm="12"
+                   size-lg="7">
+            <!-- Description --------------------------------------------------------------------------------------------------->
+            <cstm-input-textarea-item [autoGrow]="formObj.value.description !== '' ? true : false"
+                                      [errorCondition]="formObj.get('description').invalid && formObj.get('description').touched"
+                                      [errorMsg]="errorMsgs.description"
+                                      placeholder="Description*"
+                                      controlName="description">
+            </cstm-input-textarea-item>
+          </ion-col>
+        </ion-row>
+
+       
+
+        <!-- Save + Cancel Button Row --------------------------------------------------------------------------------------------------------------------->
+        <ion-row class="ion-padding-top ion-justify-content-center">
+
+          <!-- Cancel Button -------------------------------------------------------------------->
+          <ion-button routerLink="/client/products-dashboard"
+                      routerDirection="back"
+                      style="--border-radius: 22px; width: 150px;"
+                      class="ion-float-right"
+                      size="large"
+                      color="danger">
+            <ion-text style="text-transform: capitalize;  font-size: 15px;   font-weight: 900;"
+                      class="fontBtn">
+              Cancel
+            </ion-text>
+          </ion-button>
+
+          <!-- Save Button -------------------------------------------------------------------------------------------------------------------------------->
+          <ion-button (click)="onSubmit()"
+                      [disabled]="formObj.invalid "
+                      style="--border-radius: 22px; width: 150px;"
+                      class="ion-float-right"
+                      size="large">
+            <ion-text style="text-transform: capitalize; font-size: 15px;   font-weight: 900;"
+                      class="fontBtn">
+              Save
+            </ion-text>
+          </ion-button>
+        </ion-row>
+
+      </ion-grid>
+    </div>
+  </form>
+</ion-content>

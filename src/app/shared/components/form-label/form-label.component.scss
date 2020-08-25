@@ -1,0 +1,28 @@
+@import "../../../../theme/scss/variables";;
+
+label {
+  @include formLabel();
+  transition: all 0.15s ease-out;
+  line-height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &.active {
+    color: $brand-primary;
+  }
+
+  &.error, &.active.error {
+    color: $red;
+  }
+}
+
+.label-error {
+  @include fadeInDown(0.5s, -20px);
+}
+
+// span.error-message {
+//   color: $red;
+//   font-weight: 600;
+// }
