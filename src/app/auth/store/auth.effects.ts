@@ -86,7 +86,7 @@ export class AuthEffects {
         catchError(error => {
           console.log('error in login$', error);
           this.uiHelper.displayErrorAlert(error.message);
-          return of(new fromCore.HandleError({ error: { ...error }, actionType: action.type, payload: { ...action.payload }, insertError: false }));
+          return of(new fromCore.HandleError({ error: { ...error }, actionType: action.type, payload: { ...action.payload }, insertError: true }));
         })
       );
     })

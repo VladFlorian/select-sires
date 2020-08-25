@@ -12,6 +12,7 @@
     "android": "npx cap open android",
     "ios": "npx cap open ios",
     "buildDeploy": "npm run config  &&  ng build --prod --aot && firebase deploy --project select-sires --only hosting",
+    "deploy": " firebase deploy --project select-sires --only hosting",
     "test": "npm run config && ng test --no-watch --source-map=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "npm run config  &&  ng e2e",

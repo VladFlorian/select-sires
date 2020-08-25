@@ -35,7 +35,7 @@ export class CoreEffects {
       const payload: any = action.payload.payload;
       const insertErrorFlag = action.payload.insertError;
       const dataObj = this.coreDataObjHelper.handleError(error, actionType, payload, currentUser, quickLog);
-      // console.log('dataObj', dataObj);
+      // console.log('handleError - dataObj', dataObj);
       //-------------------------------------------------------------------------------------------------------//
       if (insertErrorFlag) {
         //---------------------------------------------------------//

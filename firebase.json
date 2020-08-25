@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "./dist/app",
-    "target": "select-sires",
     "ignore": [
       "firebase.json",
       "**/.*",
